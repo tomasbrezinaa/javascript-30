@@ -1,7 +1,7 @@
 :root {
     --base: grey;
     --spacing: 10px;
-    --blur: 10px;
+    --blur: 0px;
 }
 
 
@@ -33,6 +33,6 @@ img {
 }
 
 .image {
-    width: 40%;
+    width: 70%;
     border-radius: 10px;
 }
