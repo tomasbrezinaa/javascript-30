@@ -1,5 +1,5 @@
 :root {
-    --base: ##cacaca;
+    --base: grey;
     --spacing: 10px;
     --blur: 10px;
 }
@@ -17,9 +17,16 @@ body {
     font-size: 50px;
 }
 
-span {
-    color: #e6b31e;
+img {
+    padding: var(--spacing);
+    background: var(--base);
+    filter: blur(var(--blur))
 }
+
+.h1 {
+    color: var(--base);
+}
+
 
 .controls {
     margin-bottom: 50px;
