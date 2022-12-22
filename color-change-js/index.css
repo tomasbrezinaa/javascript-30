@@ -1,3 +1,10 @@
+:root {
+    --base: ##cacaca;
+    --spacing: 10px;
+    --blur: 10px;
+}
+
+
 body {
     text-align: center;
 }
