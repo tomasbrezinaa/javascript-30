@@ -59,3 +59,54 @@ const older = inventors.filter(inventor => (inventor.year >= 1500 && inventor.ye
 const fullName = inventors.map(inventor => `${inventor.first} ${inventor.last}`);
 
 console.log(fullName)
+
+const sortArray = inventors.sort((firstPerson, secondPerson) => firstPerson.year > secondPerson.year ? 1 : -1);
+
+console.log(sortArray)
+
+const totalYears = inventors.reduce((total, inventor) => {
+    return total + (inventor.passed - inventor.year)
+}, 0);
+
+console.log(totalYears);
+
+const sortOldest = inventors.sort(function (a, b) {
+    const lastGuy = a.passed - a.year;
+    const nextGuy = b.passed - b.year;
+    return lastGuy > nextGuy ? -1 : 1;
+});
+
+console.table(sortOldest);
+
+// const category = document.querySelector('.mw-category');
+// const links = [...category.querySelectorAll('a')];
+// const de = links
+//     .map(link => link.textContent)
+//     .filter(streetName => streetName.includes('de'))
+
+const alpha = people.sort((lastOne, nextOne) => {
+    const [aLast, aFirst] = lastOne.split(', ');
+    const [bLast, bFirst] = nextOne.split(', ');
+    return aLast > bLast ? 1 : -1;
+})
+
+console.log(alpha);
+
+const data = ['car', 'car', 'truck', 'truck', 'bike', 'walk', 'car', 'van', 'bike', 'walk', 'car', 'van', 'car', 'truck'];
+
+const numbers = data.reduce(function (obj, item) {
+    if (!obj[item]) {
+        obj[item] = 0;
+    }
+    obj[item]++;
+    return obj;
+}, {
+    car: 0,
+    walk: 0,
+    truck: 0,
+    bike: 0,
+    van: 0,
+})
+
+console.log(numbers);
+
